@@ -11,7 +11,7 @@
 	<artifactId>Api-BackEnd</artifactId>
 	<packaging>jar</packaging>
 	<version>1.0</version>
-	<name>Api-BackEnd</name>
+	<name>${project.artifactId}</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>1.8</java.version>
