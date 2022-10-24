@@ -9,7 +9,7 @@
 	</parent>
 	<groupId>unl.dswac</groupId>
 	<artifactId>Api-BackEnd</artifactId>
-	<packaging>jar</packaging>
+	<packaging>war</packaging>
 	<version>1.0</version>
 	<name>${project.artifactId}</name>
 	<description>Demo project for Spring Boot</description>
