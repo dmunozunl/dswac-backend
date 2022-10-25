@@ -29,6 +29,9 @@ public class Reclamo {
 	@OneToOne
 	@JoinColumn(name = "id_cliente")
 	private Cliente cliente;
+	@OneToOne
+	@JoinColumn(name = "id_usuario")
+	private Usuario usuario;
 
 	public Reclamo() {
 		super();
@@ -72,6 +75,14 @@ public class Reclamo {
 
 	public void setCliente(Cliente cliente) {
 		this.cliente = cliente;
+	}
+
+	public Usuario getUsuario() {
+		return usuario;
+	}
+
+	public void setUsuario(Usuario usuario) {
+		this.usuario = usuario;
 	}
 
 }
