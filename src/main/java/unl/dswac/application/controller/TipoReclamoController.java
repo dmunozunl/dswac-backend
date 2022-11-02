@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import unl.dswac.application.controller.responses.Respuesta;
 import unl.dswac.application.model.TipoReclamo;
 import unl.dswac.application.service.TipoReclamoService;
 
@@ -38,8 +39,8 @@ public class TipoReclamoController {
 	};
 
 	@DeleteMapping("/delete/{id}")
-	public String borrarTipoReclamoPorId(@PathVariable("id") Long id) {
-		return this.tipoReclamoService.borrarTipoReclamoPorId(id) ? "OK" : "ERROR";
+	public Respuesta borrarTipoReclamoPorId(@PathVariable("id") Long id) {
+		return this.tipoReclamoService.borrarTipoReclamoPorId(id) ? new Respuesta("OK") : new Respuesta("OK");
 	};
 
 }

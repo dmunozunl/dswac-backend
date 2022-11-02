@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import unl.dswac.application.controller.responses.Respuesta;
 import unl.dswac.application.model.Usuario;
 import unl.dswac.application.service.UsuarioService;
 
@@ -38,8 +39,8 @@ public class UsuarioController {
 	};
 
 	@DeleteMapping("/delete/{id}")
-	public String borrarUsuarioPorId(@PathVariable("id") Long id) {
-		return this.usuarioServicio.borrarUsuarioPorId(id) ? "OK" : "ERROR";
+	public Respuesta borrarUsuarioPorId(@PathVariable("id") Long id) {
+		return this.usuarioServicio.borrarUsuarioPorId(id) ? new Respuesta("OK") : new Respuesta("ERROR");
 	};
 
 }

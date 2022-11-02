@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import unl.dswac.application.controller.responses.Respuesta;
 import unl.dswac.application.model.Reclamo;
 import unl.dswac.application.service.ReclamoService;
 
@@ -44,8 +45,8 @@ public class ReclamoController {
 	};
 
 	@DeleteMapping("/delete/{id}")
-	public String borrarReclamoPorId(@PathVariable("id") Long id) {
-		return this.reclamoService.borrarReclamoPorId(id) ? "OK" : "ERROR";
+	public Respuesta borrarReclamoPorId(@PathVariable("id") Long id) {
+		return this.reclamoService.borrarReclamoPorId(id) ? new Respuesta("OK") : new Respuesta("ERROR");
 	};
 
 }
