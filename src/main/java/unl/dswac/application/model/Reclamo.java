@@ -18,7 +18,7 @@ public class Reclamo {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	@Temporal(TemporalType.TIMESTAMP)
+	//@Temporal(TemporalType.TIMESTAMP)
 	@Column(name = "fecha_reclamo")
 	private Date fechaReclamo;
 	@Column(name = "comentario")
