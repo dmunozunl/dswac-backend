@@ -13,6 +13,7 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonFormat.Shape;
 
 @Entity
 public class Reclamo {
@@ -21,7 +22,7 @@ public class Reclamo {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	//@Temporal(TemporalType.DATE)
-	@JsonFormat(pattern = "dd/MM/yyyy")
+	@JsonFormat(pattern = "dd/MM/yyyy", shape = Shape.STRING)
 	@Column(name = "fecha_reclamo")
 	private Date fechaReclamo;
 	@Column(name = "comentario")
